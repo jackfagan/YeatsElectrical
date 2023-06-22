@@ -6,7 +6,9 @@ import rating from './images/rating.png';
 import electricity from './images/electricity.png';
 import './App.scss';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import instagram from './images/instagram.svg';
+import phone from './images/phone.png';
+import ContactForm from './components/ContactForm';
 
 function App() {
   return (
@@ -48,7 +50,8 @@ function App() {
 
         <FadeInSection>
         <div className="service-block">
-        <div className="service-wrapper">
+        <h2 className="blue-text">Our Guarantees</h2>
+          <div className="service-wrapper">
           <div className="service-icon-wrapper">
               <img className="service-icon" src={rating} alt="description of image" />
             </div>
@@ -80,6 +83,39 @@ function App() {
         </div> 
         </FadeInSection>
 
+        <div className="contact-modal">
+          <div class="box">
+            <a class="button" href="#popup1">Let me Pop up</a>
+          </div>
+
+          <div id="popup1" class="overlay">
+            <div class="popup">
+              <h2>Here i am</h2>
+              <a class="close" href="#">&times;</a>
+              <div class="content">
+                <ContactForm />
+                Thank to pop me out of that button, but now i'm done so you can close this window.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="contact-div">
+          <hr />
+          <br />
+          <div className="contact-footer">
+            <div className="social-icons">
+          <a href="https://instagram.com/londonexecutivecleaning?utm_medium=copy_link">
+              <img className="social-icon" src={instagram} />
+            </a>
+            <a href="tel:07720616834">
+              <img className="social-icon" src={phone} />
+            </a>
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
       </body>
     </div>
   );
@@ -105,3 +141,6 @@ function FadeInSection(props) {
     </div>
   );
 }
+
+
+
