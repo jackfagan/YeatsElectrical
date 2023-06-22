@@ -1,6 +1,9 @@
 import logoDesktop from './images/banner.jpg';
 import logoMobile from './images/logo.png';
 import logoText from './images/logo_text.jpeg';
+import handshake from './images/handshake.png';
+import rating from './images/rating.png';
+import electricity from './images/electricity.png';
 import './App.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -42,6 +45,41 @@ function App() {
           </FadeInSection>
 
         </div>
+
+        <FadeInSection>
+        <div className="service-block">
+        <div className="service-wrapper">
+          <div className="service-icon-wrapper">
+              <img className="service-icon" src={rating} alt="description of image" />
+            </div>
+            <div className="service-text">
+              <h3>STANDARD OF EXCELLENCE</h3>
+              <p>We hold ourselves to a very high professional standard. Accordingly, customer satisfaction is paramount to us. To ensure that we are doing our best work for you, we require our electricians to be punctual and respectful, and we always encourage perfectionism. At the end of the day, we do not consider a job as finished until you consider it as such.</p>
+              </div>
+          </div> 
+
+          <div className="service-wrapper">
+            <div className="service-icon-wrapper">
+              <img className="service-icon" src={electricity} alt="description of image"/>
+            </div>
+            <div className="service-text">
+              <h3>FREE QUOTATIONS</h3>
+              <p>We want to foster a long-term relationship with our clients where they can trust that we have their best interests at heart. This begins with our promise of free quotations because you deserve to know the full plan before you choose to work with us.</p>
+             </div>
+          </div> 
+
+          <div className="service-wrapper">
+            <div className="service-icon-wrapper">
+              <img className="service-icon" src={handshake} alt="description of image"/>
+            </div>
+            <div className="service-text desktop-padding-top">
+              <h3>LICENSING AND INSURANCE</h3>
+              <p>All our licences and insurances are updated and checked on a regular basis so that our work is in line with legal standards. </p>
+            </div>
+          </div> 
+        </div> 
+        </FadeInSection>
+
       </body>
     </div>
   );
