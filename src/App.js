@@ -9,6 +9,8 @@ import React from 'react';
 import instagram from './images/instagram.svg';
 import phone from './images/phone.png';
 import ContactForm from './components/ContactForm';
+import ContentCards from './components/ContentCards';
+
 
 function App() {
   return (
@@ -34,8 +36,8 @@ function App() {
         </div>      
         <div className="our_services"> 
           <FadeInSection>
-            <h2 className="blue-text">Our Services</h2>
-          <ul>
+            <ContentCards />
+          {/* <ul>
             <li><img className="list-logo" src={logoMobile} alt="logo" />Domestic Renovations</li>
             <li><img className="list-logo" src={logoMobile} alt="logo" />Rewiring</li>
             <li><img className="list-logo" src={logoMobile} alt="logo" />Electric Vehicle Charging Points</li>
@@ -43,7 +45,7 @@ function App() {
             <li><img className="list-logo" src={logoMobile} alt="logo" />Electric and Storage Heating</li>
             <li><img className="list-logo" src={logoMobile} alt="logo" />Fire Alarm Installations</li>
             <li><img className="list-logo" src={logoMobile} alt="logo" />EICRs</li>
-          </ul>
+          </ul> */}
           </FadeInSection>
 
         </div>
@@ -85,16 +87,16 @@ function App() {
 
         <div className="contact-modal">
           <div class="box">
-            <a class="button" href="#popup1">Let me Pop up</a>
+            <a class="button" href="#popup1">Contact Us</a>
+            <a class="button" href="#popup1">See Our Gallery</a>
           </div>
 
           <div id="popup1" class="overlay">
             <div class="popup">
-              <h2>Here i am</h2>
+              <h2>Contact Us</h2>
               <a class="close" href="#">&times;</a>
               <div class="content">
                 <ContactForm />
-                Thank to pop me out of that button, but now i'm done so you can close this window.
               </div>
             </div>
           </div>

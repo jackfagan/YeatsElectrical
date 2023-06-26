@@ -89,6 +89,7 @@
 
     .service-block {
       padding-top: 4rem;
+      margin-bottom: 4rem;
   
       .service-wrapper {
         max-width: 90%;
@@ -208,17 +209,38 @@ blue-text {
     margin: 0 auto;
     background-clip: padding-box;
     text-align: center;
+    height: 7rem;
+
+    @media (min-width: 600px) {
+      height: 4rem;
+    }
+  }
+
+  .submit-btn {
+    padding: 0.5rem 2rem;
+    margin-top: 3rem;
+  }
+
+  input {
+    padding: 1rem;
   }
   
   .button {
-    font-size: 1em;
+    padding: 0.6rem 2rem;
     color: #fff;
     background: #13022c;
-    border-radius: 20px/50px;
+    margin: 1rem;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-out;
+    display: block;
+    font-size: 1.25rem;
+
+    @media (min-width: 600px) {
+      display: inline-block;
+    }
   }
+
   .button:hover {
     background: #5d96ef;
   }
@@ -242,7 +264,8 @@ blue-text {
   .popup {
     margin: 70px auto;
     padding: 20px;
-    background: #fff;
+    background-color: #13022c;
+    color: #fff;
     border-radius: 5px;
     width: 30%;
     position: relative;
@@ -251,7 +274,6 @@ blue-text {
   
   .popup h2 {
     margin-top: 0;
-    color: #333;
     font-family: Tahoma, Arial, sans-serif;
   }
   .popup .close {
@@ -262,7 +284,7 @@ blue-text {
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
-    color: #333;
+    color: #fff;
   }
   .popup .close:hover {
     color: #06D85F;
@@ -281,3 +303,62 @@ blue-text {
     }
   }
 }
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+
+.cards-container {
+  display: flex;
+  border-radius: 6px;
+  color: #333;
+  background: #eee;
+  padding: 1rem;
+  box-shadow: 0 0 1rem #000 inset;
+  overflow-x: auto;
+  position: relative;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+.card {
+  flex: 1 0 250px;
+  box-shadow: 0 1px 1rem -4px #000;
+  background: #fff;
+  margin: 1rem;
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+  
+  img {
+    width: 250px;
+    height: 250px;
+    object-fit: center;
+  }
+  
+  &:hover {
+    box-shadow: 0 4px 1rem -4px #000;
+    transform: translateY(-3px);
+  }
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 625px) {
+  .container {
+    width: 100%
+  }
+  
+  .cards-container {
+    padding: .5rem;
+  }
+  
+  .card {
+    margin: .5rem;
+  }
+}}
