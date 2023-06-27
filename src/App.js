@@ -114,8 +114,6 @@ function App() {
         </div>
 
         <div className="contact-div">
-          <hr />
-          <br />
           <div className="contact-footer">
             <div className="social-icons">
             <a target="_blank" href="https://www.instagram.com/yeats_electrical_ltd/">
@@ -126,8 +124,6 @@ function App() {
             </a>
             </div>
           </div>
-          <br />
-          <br />
         </div>
       </body>
     </div>
