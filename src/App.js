@@ -10,6 +10,7 @@ import instagram from './images/instagram.svg';
 import phone from './images/phone.png';
 import ContactForm from './components/ContactForm';
 import ContentCards from './components/ContentCards';
+import ImageGallery from './components/ImageGallery';
 
 
 function App() {
@@ -65,7 +66,7 @@ function App() {
 
           <div className="service-wrapper">
             <div className="service-icon-wrapper">
-              <img className="service-icon" src={electricity} alt="description of image"/>
+              <img className="service-icon margin" src={electricity} alt="description of image"/>
             </div>
             <div className="service-text">
               <h3>FREE QUOTATIONS</h3>
@@ -75,7 +76,7 @@ function App() {
 
           <div className="service-wrapper">
             <div className="service-icon-wrapper">
-              <img className="service-icon" src={handshake} alt="description of image"/>
+              <img className="service-icon margin" src={handshake} alt="description of image"/>
             </div>
             <div className="service-text desktop-padding-top">
               <h3>LICENSING AND INSURANCE</h3>
@@ -86,17 +87,27 @@ function App() {
         </FadeInSection>
 
         <div className="contact-modal">
-          <div class="box">
+          <div id="cta-buttons" class="box">
             <a class="button" href="#popup1">Contact Us</a>
-            <a class="button" href="#popup1">See Our Gallery</a>
+            <a class="button" href="#popup2">See Our Gallery</a>
           </div>
 
           <div id="popup1" class="overlay">
             <div class="popup">
               <h2>Contact Us</h2>
-              <a class="close" href="#">&times;</a>
+              <a class="close" href="#cta-buttons">&times;</a>
               <div class="content">
                 <ContactForm />
+              </div>
+            </div>
+          </div>
+
+          <div id="popup2" class="overlay">
+            <div class="popup-gallery">
+              <h2>Our Gallery</h2>
+              <a class="close" href="#cta-buttons">&times;</a>
+              <div class="content image-gallery">
+                <ImageGallery />
               </div>
             </div>
           </div>
@@ -107,7 +118,7 @@ function App() {
           <br />
           <div className="contact-footer">
             <div className="social-icons">
-          <a href="https://www.instagram.com/yeats_electrical_ltd/">
+            <a target="_blank" href="https://www.instagram.com/yeats_electrical_ltd/">
               <img className="social-icon" src={instagram} />
             </a>
             <a href="tel:07395810679">

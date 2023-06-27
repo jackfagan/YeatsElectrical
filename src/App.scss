@@ -1,7 +1,8 @@
 .App {
   text-align: center;
-  background-color: #cee1ff;
-  
+  background-color: #203961;
+  color: white;
+
   .App-header {
     background-color: #13022c;
     min-height: 55rem;
@@ -109,8 +110,17 @@
             height: 7rem;
           }
 
+          .margin {
+            margin: 1.5rem 0;
+
+            @media (min-width: 600px) {
+              margin: auto;
+            }  
+          }
+
           .service-icon {
             width: 6rem;
+            filter: brightness(0) invert(1);
           }  
         }
 
@@ -273,19 +283,34 @@ blue-text {
   .popup {
     margin: 70px auto;
     padding: 20px;
-    background-color: #13022c;
+    background-color: #203961;
     color: #fff;
     border-radius: 5px;
     width: 30%;
     position: relative;
     transition: all 5s ease-in-out;
   }
+
+  .popup-gallery {
+    margin: 70px auto;
+    padding: 20px;
+    background-color: #203961;
+    color: #fff;
+    border-radius: 5px;
+    width: 50%;
+    position: relative;
+    transition: all 5s ease-in-out;
+
+    @media screen and (max-width: 700px){
+      width: 80%;
+    }
+  }
   
-  .popup h2 {
+  h2 {
     margin-top: 0;
     font-family: Tahoma, Arial, sans-serif;
   }
-  .popup .close {
+  .close {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -295,10 +320,11 @@ blue-text {
     text-decoration: none;
     color: #fff;
   }
-  .popup .close:hover {
-    color: #06D85F;
+ 
+  .close:hover {
+    color: #061347;
   }
-  .popup .content {
+  .content {
     max-height: 30%;
     overflow: auto;
   }
@@ -333,13 +359,18 @@ blue-text {
 .card {
   flex: 1 0 250px;
   box-shadow: 0 1px 1rem -4px #000;
-  background: #fff;
-  margin: 1rem;
+  background: white;
   overflow: hidden;
+  color:  #13022c;
   border-radius: 6px;
   cursor: pointer;
   transition: all 250ms ease-in-out;
-  
+  margin: 0;
+
+  @media screen and (min-width: 700px){
+    margin: 0 0.75rem;
+  }
+
   img {
     width: 250px;
     height: 250px;
@@ -369,3 +400,150 @@ blue-text {
     margin: .5rem;
   }
 }}
+
+.image-gallery {
+  #gallery-container {
+    width: 100%;
+    background: #f2f2f2;
+    position: relative;
+    text-align: center;
+    overflow-x: hidden;
+    margin: auto;
+  }
+
+  .gallery-img-container {
+    transition: all 0.5s linear;
+    vertical-align: top;
+    position: relative;
+    text-align: center;
+  }
+
+  .gallery-img {
+    vertical-align: top;
+    height : 300px;
+    /*   width : 550px; */
+    width:100%
+  }
+
+  #slider-img-container {
+    position : relative;
+  /*   border-top : 2px solid #bbb; */
+    width : 1070px;
+    left : 0px;
+    white-space : nowrap;
+    overflow-x : hidden;
+    transition: all .5s linear;
+  }
+
+  .slider-img {
+    cursor : pointer;
+    margin-left : 5px;
+    margin-top : 5px;
+    margin-bottom : 5px;
+    height: 60px;
+    width: 100px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .slider-img.active {
+    border : 2px solid blue;
+    box-shadow :2px 2px 2px #888888;
+    transform : scale(1.05);
+  }
+  #carousel-dot-container {
+    position : absolute;
+    bottom : 2%;
+    width:100%;
+    z-index: 1;
+  
+  }
+  .carousel-dot {
+    cursor : pointer;
+    display: inline-block;
+    vertical-align: top;
+    margin-left : 2%;
+    color:#e6e6e6;
+  }
+  .carousel-dot:hover{
+    transform : scale(1.5);
+  }
+  .carousel-dot.active {
+    color:blue;
+  }
+
+  .prev-carousel-button {
+    cursor : pointer;
+    background-color : #e6e6e6;
+    border : 1px solid #e6e6e6;
+    padding-bottom : .15em;
+    padding-left : .5em;
+    padding-right : .75em;
+    border-radius : 15px;
+    color : #666666;
+    position : absolute;
+    left : 1%;
+    top :50%;
+    height: 28px;
+    user-select: none;
+    box-shadow :1px 1px 1px #888888;
+  }
+  .prev-carousel-button:hover {
+    transform : scale(1.1);
+  }
+  .next-carousel-button {
+    cursor : pointer;
+  background-color : #e6e6e6;
+    border : 1px solid #e6e6e6;
+    padding-top : .15em;
+    padding-left : .75em;
+    padding-right : .5em;
+    border-radius : 15px;
+    color : #666666;
+    position : absolute;
+    right : 1%;
+    top :50%;
+    height: 25px;
+    user-select: none;
+    box-shadow :1px 1px 1px #888888;
+  }
+  .next-carousel-button:hover {
+  transform : scale(1.1);
+    
+  }
+  .slideshow-button {
+    outline : none;
+    cursor : pointer;
+    background-color : transparent;
+    border : 1px solid transparent;
+    color : #f2f2f2;
+    z-index:2;
+    font-size : 0%;
+    position : absolute;
+    font-size : 180%;
+    padding :0px;
+    bottom : 1%;
+    left : 1%;
+    
+  }
+  .fullscreen-button {
+    outline : none;
+    cursor : pointer;
+    background-color : transparent;
+    border : 1px solid transparent;
+    color : #f2f2f2;
+    padding : 0px;
+    z-index:2;
+    font-size : 180%;
+    position : absolute;
+    bottom : 1%;
+    right : 1%;
+  }
+
+  .fullscreen-button:hover {
+    transform : scale(1.1);
+  } 
+  .slideshow-button:hover {
+    transform : scale(1.1);
+  }
+}
