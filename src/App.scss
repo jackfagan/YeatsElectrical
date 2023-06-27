@@ -47,8 +47,13 @@
   }
 
   body {
+    h2 {
+      margin: 2rem 0;
+      text-transform: uppercase;
+    }
+
     .introduction {
-      margin: 0 1rem;
+      margin: 2rem 1rem;
 
       h3 {
         font-size: 1.5rem;
@@ -57,7 +62,7 @@
       }
       
       @media (min-width: 600px) {
-        margin: 0 3rem;
+        margin: 3rem 3rem;
       }
     }
 
@@ -124,14 +129,18 @@
     .contact-div {
       background-color: white;
  
+      @media (min-width: 1000px) {
+        display: none;
+      }
+
       .contact-footer  {
     
         .social-icons {
           display: block;
     
           .social-icon {
-            width: 40px;
-            height: 40px;
+            width: 60px;
+            height: 60px;
             display: inline-block;
             margin: auto;
             margin-right: 1rem;
@@ -205,27 +214,27 @@ blue-text {
 
 
 .contact-modal {
+  margin: 1rem 0;
+
   .box {
     margin: 0 auto;
     background-clip: padding-box;
     text-align: center;
     height: 7rem;
-
-    @media (min-width: 600px) {
-      height: 4rem;
-    }
   }
 
   .submit-btn {
     padding: 0.5rem 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 
   input {
     padding: 1rem;
+    margin: 0.5rem 0;
   }
   
   .button {
+    text-transform: uppercase;
     padding: 0.6rem 2rem;
     color: #fff;
     background: #13022c;
@@ -313,9 +322,7 @@ blue-text {
   display: flex;
   border-radius: 6px;
   color: #333;
-  background: #eee;
   padding: 1rem;
-  box-shadow: 0 0 1rem #000 inset;
   overflow-x: auto;
   position: relative;
   
@@ -346,7 +353,7 @@ blue-text {
 }
 
 .card-content {
-  padding: 1rem;
+  padding: 0.5rem 1rem 1rem 1rem;
 }
 
 @media screen and (max-width: 625px) {

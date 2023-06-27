@@ -107,10 +107,10 @@ function App() {
           <br />
           <div className="contact-footer">
             <div className="social-icons">
-          <a href="https://instagram.com/londonexecutivecleaning?utm_medium=copy_link">
+          <a href="https://www.instagram.com/yeats_electrical_ltd/">
               <img className="social-icon" src={instagram} />
             </a>
-            <a href="tel:07720616834">
+            <a href="tel:07395810679">
               <img className="social-icon" src={phone} />
             </a>
             </div>
