@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
+import image1 from '../images/gallery/image1.jpg';
+import image2 from '../images/gallery/image2.jpg';
+import image3 from '../images/gallery/image3.jpg';
+import image4 from '../images/gallery/image4.jpg';
+import image5 from '../images/gallery/image5.jpg';
+import image6 from '../images/gallery/image6.jpg';
+import image7 from '../images/gallery/image7.jpg';
+import image8 from '../images/gallery/image8.jpg';
+import image9 from '../images/gallery/image9.jpg';
+
 
 // import {CSSTransitionGroup} from 'react-transition-group';
 const ImageURL = [
-  'https://images.unsplash.com/photo-1522204538344-922f76ecc041?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=50e38600a12d623a878983fc5524423f&auto=format&fit=crop&w=751&q=80',
-  'https://images.unsplash.com/photo-1434493907317-a46b5bbe7834?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ef3d9fab9593225bc80ddad5c0f7308&auto=format&fit=crop&w=750&q=80',
-  'https://images.unsplash.com/photo-1491933382434-500287f9b54b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f5a57d73d6a357b35b35220d9b150b02&auto=format&fit=crop&w=400&q=80',
-  'https://images.unsplash.com/1/apple-gear-looking-pretty.jpg?ixlib=rb-0.3.5&s=f2c32e45682d8b19a77fa594d2b5980d&auto=format&fit=crop&w=750&q=80',
-  'https://images.unsplash.com/photo-1421757295538-9c80958e75b0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjF9&s=0951c1944637dbfce6904add6c55ce8a&auto=format&fit=crop&w=753&q=80',
-  'https://images.unsplash.com/photo-1511367734837-f2956f0d8020?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=07df2ec833c0d0cc1086c49f28042239&auto=format&fit=crop&w=694&q=80',
-  'https://images.unsplash.com/photo-1518118115078-c6adc68910bd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fb1cd92c0f9683fe93a6fd99a8277b0f&auto=format&fit=crop&w=750&q=80',
-  'https://images.unsplash.com/photo-1516865690679-db5c36d24903?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8e26149ded25a0beda73c5942768257c&auto=format&fit=crop&w=750&q=80',
-  'https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?ixlib=rb-0.3.5&s=52e6edc6f5427ca1cc3a895ae4e01ea5&auto=format&fit=crop&w=500&q=60',
-  'https://images.unsplash.com/photo-1498409785966-ab341407de6e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8a87674644cd4f622df5c57facbccf1e&auto=format&fit=crop&w=500&q=60'
+  image9,
+  image8,
+  image7,
+  image6,
+  image5,
+  image4,
+  image3,
+  image2,
+  image1
 ];
 
 class ImageGallery extends React.Component {
@@ -174,15 +183,6 @@ class ImageGallery extends React.Component {
         <div className="next-carousel-button" onClick={this.nextHandler}>
           &#9654;
         </div>
-        {this.state.slideshow === false ? (
-          <button className="slideshow-button" onClick={this.slideshowHandler}>
-            &#9654;
-          </button>
-        ) : (
-          <button className="slideshow-button" onClick={this.slideshowHandler}>
-            &#9646;&#9646;
-          </button>
-        )}
         {this.state.fullscreen === false ? (
           <button className="fullscreen-button" onClick={this.enterfullScreen}>
             &#9635;
